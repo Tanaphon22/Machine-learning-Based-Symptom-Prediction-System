@@ -11,9 +11,9 @@
 
 1. **Data Understanding**
    <img width="1525" height="212" alt="image" src="https://github.com/user-attachments/assets/c5ce1c89-d227-4aee-abb5-c359bc060573" />
-   -image shows that in gender and age columns Leave it alone
-
-
+   -in gender factor, we can use onehotencoder with it for ML and age just leave it. the main problem is Summary and Search_term colums. in Summary i can see symptom data locate after 'yes_symptoms' and text. so i use code for tranfrom from json to python dict and i got list of symptoms
+   <img width="316" height="319" alt="image" src="https://github.com/user-attachments/assets/72016e9e-c3d3-4482-9d07-0f8cb503c9c0" />
+   -as you can see we got some word is not cotain
 
 
 ## Deployment Steps
