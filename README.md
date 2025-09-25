@@ -14,12 +14,17 @@
    
    <img width="1525" height="212" alt="image" src="https://github.com/user-attachments/assets/c5ce1c89-d227-4aee-abb5-c359bc060573" />
 
-   -จากภาพจะเห็นได้ว่าตัวแปลที่สามารถจัดการก่อนจะมีตัวแปล Gender โดยจะใช้ onehotencoder เพื่อแปลงให้เป็นตัวเลยเพื่อที่เราจะสามารถเอาเข้าไปใน ML ได้ ต่อมาจะเป็นตัวแปล Age ซึ่งเป็นตัวเลขอยู่แล้วจึงสามารถข้ามไปได้ก่อน โดยปัญหาหลักคือตัวแปล Summary และ Search_term ปัญหาของตัวแปล Summary คือยังอยู่ในรูปแบบ json ซึ่งเราจะเห็นได้ว่าข้อมูลข้างในมีข้อมูลของอาการป่วยอยู่ จึงทำการดึงข้อมูลนั้นออกมาจากตัว json และเก็บอยู่ dataframe column
+   - **Gender**  
+  ตัวแปรประเภท categorical สามารถจัดการได้โดยใช้ OneHotEncoder เพื่อให้พร้อมสำหรับโมเดล Machine Learning
 
-   -From the image, we can see that the variable that can be handled first is Gender, which will be transformed using OneHotEncoder so that it can be fed into the ML model. Next is Age variable, which is already numeric and can be left as is. The main problem lies with Summary and Search_term variables. The issue with Summary is that it is still in JSON format, which contains information about symptoms. Therefore, we extract that information from JSON and store it in the dataframe column
+   - **Age**  
+  ตัวแปร numerical อยู่แล้ว จึงไม่ต้องแปลงเพิ่มเติม
 
+   - **Summary**  
+  ตัวแปรอยู่ในรูปแบบ JSON ข้างในมีข้อมูลเกี่ยวกับอาการป่วย จำเป็นต้องดึงข้อมูล (extract) เพื่อใช้ในการวิเคราะห์และสร้างโมเดล
 
-   -จากที่ได้ข้อมูลของอาการป่วยมาแล้วจะเห็นได้ว่ามีคำที่ไม่ได้เกี่ยวข้องกับอาการป่วยและภาษาอังกฤษรวมอยู่ด้วยเช่น "การรักษาก่อนหน้า", "ประวัติอุบัติเหตุ", "Fever" จึงทำการลบพวกมันออกไป
+   - **Search_term**  
+  ตัวแปรที่จะเป็น target ของโมเดล Machine Learning ปัญหาคือข้อมูลบางแถวมีมากกว่า 1 ค่า จึงต้องพิจารณาวิธีการจัดการให้เหมาะสม
 
    
 
