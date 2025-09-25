@@ -15,53 +15,33 @@
    <img width="1525" height="212" alt="image" src="https://github.com/user-attachments/assets/c5ce1c89-d227-4aee-abb5-c359bc060573" />
 
    - **Gender**  
-  ตัวแปรประเภท categorical สามารถจัดการได้โดยใช้ OneHotEncoder เพื่อให้พร้อมสำหรับโมเดล Machine Learning
+  ตัวแปรประเภท categorical ซึ่งบอกถึงเพศของผู้ใช้งาน
 
    - **Age**  
-  ตัวแปร numerical อยู่แล้ว จึงไม่ต้องแปลงเพิ่มเติม
+  ตัวแปร numerical ซึ่งบอกถึงอายุของผู้ใช้งาน
 
    - **Summary**  
-  ตัวแปรอยู่ในรูปแบบ JSON ข้างในมีข้อมูลเกี่ยวกับอาการป่วย จำเป็นต้องดึงข้อมูล (extract) เพื่อใช้ในการวิเคราะห์และสร้างโมเดล
+  ตัวแปรอยู่ในรูปแบบ JSON ข้างในมีข้อมูลเกี่ยวกับอาการป่วย จำเป็นต้องดึงข้อมูลเพื่อใช้ในการวิเคราะห์และสร้างโมเดล
 
    - **Search_term**  
   ตัวแปรที่จะเป็น target ของโมเดล Machine Learning ปัญหาคือข้อมูลบางแถวมีมากกว่า 1 ค่า จึงต้องพิจารณาวิธีการจัดการให้เหมาะสม
 
    
+2. **Data Preprocessing & Cleaning**
 
-## Deployment Steps
+   ก่อนนำข้อมูลไปใช้กับ Machine Learning จำเป็นต้องทำการเตรียมและปรับแต่งข้อมูลให้พร้อมก่อนได้แก่
 
-1. **Upload Data to S3**
-   - Create an S3 bucket and upload your data files.
+   - **Gender**  
+   ตัวแปรประเภท categorical ที่ยังไม่สามารถนำเข้า Machine Learning ได้ จำเป็นต้องแปลงจากตัวอักษรเป็นตัวเลขด้วย OneHotEncoder เพื่อให้สามารถใช้กับ ML ได้
 
-2. **Set Up AWS Glue Crawler**
-   - Configure AWS Glue to crawl the S3 data and create a catalog.
+   - **Age**  
+  ตัวแปร numerical สามารถใช้กับ ML ได้ทันทีโดยไม่ต้องแปลงค่า
 
-3. **Query Data Using Athena**
-   - Use Amazon Athena to analyze the data stored in S3.
+   - **Summary**  
+  ตัวแปรอยู่ในรูปแบบ JSON ข้างในมีข้อมูลเกี่ยวกับอาการป่วยอยู่ จึงทำการดึงข้อมูลออกมาซึ่งข้อมูลอาการส่วนใหญ่นั้นเป็นภาษาไทยแต่ว่าข้อมูลที่ดึงออกมามีบางตัวที่เป็นภาษาอังกฤษ
+  
+   
 
-4. **Transform Data with AWS Glue**
-   - Set up ETL jobs to clean and transform data.
 
-5. **Load Data into Redshift**
-   - Create a Redshift cluster and load data from S3.
 
-6. **Connect BI Tools**
-   - Integrate Redshift with Power BI for visualization.
 
-## Prerequisites
-
-- AWS Account with necessary permissions
-- S3 bucket and IAM roles
-- AWS Glue, Athena, and Redshift setup
-
-## Tools Used
-- **AWS Services:**
-  - Amazon S3
-  - AWS Glue
-  - Amazon Athena
-  - Amazon Redshift
-- **BI Tools:**
-  - Power BI
-
-## Dashboard
-![image](https://github.com/user-attachments/assets/d63c2773-ae42-4746-baf0-ca27eb5456a1)
