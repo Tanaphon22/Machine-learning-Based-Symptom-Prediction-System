@@ -14,12 +14,14 @@
    
    <img width="1525" height="212" alt="image" src="https://github.com/user-attachments/assets/c5ce1c89-d227-4aee-abb5-c359bc060573" />
 
-   -in gender factor, we can use onehotencoder with it for ML and age just leave it. the main problem is Summary and Search_term colums. in Summary i can see symptom data locate after 'yes_symptoms' and text. so i use code for tranfrom from json to python dict and i got list of symptoms
+   -จากภาพจะเห็นได้ว่าตัวแปลที่สามารถจัดการก่อนจะมีตัวแปล Gender โดยจะใช้ onehotencoder เพื่อแปลงให้เป็นตัวเลยเพื่อที่เราจะสามารถเอาเข้าไปใน ML ได้ ต่อมาจะเป็นตัวแปล Age ซึ่งเป็นตัวเลขอยู่แล้วจึงสามารถข้ามไปได้ก่อน โดยปัญหาหลักคือตัวแปล Summary และ Search_term ปัญหาของตัวแปล Summary คือยังอยู่ในรูปแบบ json ซึ่งเราจะเห็นได้ว่าข้อมูลข้างในมีข้อมูลของอาการป่วยอยู่ จึงทำการดึงข้อมูลนั้นออกมาจากตัว json และเก็บอยู่ dataframe column
 
-   <img width="316" height="319" alt="image" src="https://github.com/user-attachments/assets/72016e9e-c3d3-4482-9d07-0f8cb503c9c0" />
+   -From the image, we can see that the variable that can be handled first is Gender, which will be transformed using OneHotEncoder so that it can be fed into the ML model. Next is Age variable, which is already numeric and can be left as is. The main problem lies with Summary and Search_term variables. The issue with Summary is that it is still in JSON format, which contains information about symptoms. Therefore, we extract that information from JSON and store it in the dataframe column
 
-   -as you can see we got some word is not cotain
 
+   -จากที่ได้ข้อมูลของอาการป่วยมาแล้วจะเห็นได้ว่ามีคำที่ไม่ได้เกี่ยวข้องกับอาการป่วยและภาษาอังกฤษรวมอยู่ด้วยเช่น "การรักษาก่อนหน้า", "ประวัติอุบัติเหตุ", "Fever" จึงทำการลบพวกมันออกไป
+
+   
 
 ## Deployment Steps
 
