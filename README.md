@@ -2,16 +2,19 @@
 
 ## Dataset Overview
 - **1000 rows and 4 columns :** Each row represents a user, and columns include personal and symptoms data
-- **Gender**
-- **age**
-- **summary**
-- **search_term**
+- **Gender :** Gender of user
+- **Age :** User's age
+- **Summary :** User's symptom information (JSON)
+- **Search_term :** Result from symptoms entered
+
+## Solution
+
+1. **Data Understanding**
+   <img width="1525" height="212" alt="image" src="https://github.com/user-attachments/assets/c5ce1c89-d227-4aee-abb5-c359bc060573" />
+   -image shows that in gender and age columns Leave it alone
 
 
-## Architecture and Data modeling
-![image](https://github.com/user-attachments/assets/caf012ff-75c9-43e2-bce0-a1110d3fbbcc)
 
-![image](https://github.com/user-attachments/assets/e069d965-0ef6-42e6-bf8f-14ac69706d6e)
 
 ## Deployment Steps
 
