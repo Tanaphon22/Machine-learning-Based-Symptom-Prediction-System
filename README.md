@@ -26,6 +26,8 @@
    - **Search_term**  
   ตัวแปรที่จะเป็น target ของโมเดล Machine Learning ปัญหาคือข้อมูลบางแถวมีมากกว่า 1 ค่า จึงต้องพิจารณาวิธีการจัดการให้เหมาะสม
 
+
+
    
 2. **Data Preprocessing & Cleaning**
 
