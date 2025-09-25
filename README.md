@@ -44,7 +44,7 @@
 
    ก่อน
 
-   <img width="301" height="321" alt="image" src="https://github.com/user-attachments/assets/ec25fe74-dedd-4acf-84cf-90534b28bae2" />
+   <img width="301" height="321" alt="image" src="https://github.com/user-attachments/assets/ec25fe74-dedd-4acf-84cf-90534b28bae2" /><img width="244" height="323" alt="image" src="https://github.com/user-attachments/assets/4d2bc65c-b44b-4b75-b139-5d38bfc4bce8" />
 
    หลัง
 
