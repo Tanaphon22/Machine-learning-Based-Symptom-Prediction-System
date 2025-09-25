@@ -42,11 +42,11 @@
    - **Summary**  
   ตัวแปรนี้อยู่ในรูปแบบ JSON ซึ่งภายในเก็บข้อมูลเกี่ยวกับอาการป่วย เมื่อดึงข้อมูลออกมา พบว่าข้อมูลส่วนใหญ่เป็นภาษาไทย แต่มีบางส่วนเป็นภาษาอังกฤษ เช่น 'Fever' รวมถึงบางคำที่ไม่เกี่ยวข้องกับอาการป่วย เช่น 'การรักษาก่อนหน้า' จึงต้องทำความสะอาดด้วยการลบออกไป
 
-   ก่อน
+   **ก่อน**
 
-   <img width="301" height="321" alt="image" src="https://github.com/user-attachments/assets/ec25fe74-dedd-4acf-84cf-90534b28bae2" /><img width="244" height="323" alt="image" src="https://github.com/user-attachments/assets/4d2bc65c-b44b-4b75-b139-5d38bfc4bce8" />
-
-   หลัง
+   <img width="301" height="321" alt="image" src="https://github.com/user-attachments/assets/ec25fe74-dedd-4acf-84cf-90534b28bae2" />
+   
+   **หลัง**
 
    <img width="244" height="323" alt="image" src="https://github.com/user-attachments/assets/4d2bc65c-b44b-4b75-b139-5d38bfc4bce8" />
 
